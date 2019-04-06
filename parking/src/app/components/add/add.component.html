@@ -1,0 +1,55 @@
+<div class="col-sm-4 col-sm-offset-4">
+  <h2>Add New Parking Info</h2>
+  <form>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="form-group">
+          <label>Student Id</label>
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="parking.StudentId"
+            name="name"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="form-group">
+          <label>License Number</label>
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="parking.LicenseNumber"
+            name="name"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="form-group">
+          <label>Name</label>
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="parking.Name"
+            name="company"
+          />
+        </div>
+      </div>
+    </div>
+  </form>
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+      <button
+        class="btn btn-primary form-control"
+        type="button"
+        (click)="save()"
+      >
+        Save
+      </button>
+    </div>
+  </div>
+</div>
