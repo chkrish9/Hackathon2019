@@ -8,9 +8,7 @@
 
 **Member 1:** Murali krishna sai Chukka
 
-**Member 2:** Venkatesh Ponduri   
-
-**Member 3:** Ly,Sang
+**Member 2:** Ly,Sang
 
 **Video URL :** https://youtu.be/UvVbDWJGeG0
 
