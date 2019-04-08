@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "umkc-lab-1",
+  "private_key_id": "162d17969aff3948d450bce84e81059c57c4e61c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDfSc4qwnABLZPH\n7HKzN/ZrNR6KcGr8rBVaao08RVOIHI64sqYLxHwq77JmIEJJli6B4inOe/TxdeR7\nlSfGHykmwKP2IFj2a5RtMLQA6A+ObqGLQYnW1O/u3EpfIAFnxwMWU5Um4e928yQN\n8KfRSd2jtI2U3mxJQcqAl0AX9thYEQQqBUsm2fHvBepnw2VVHUm/HjTM5go26N3F\n0U8u2VLPu/DnhBjvRq4nezWGwqSIctvp7xsodf0uv85AzIsL7yW3F9tgEemxihs/\nmWGaGQvUVDCKS4RbN2K5/D6JaiIlkeMbsWFVolwUjwguVMiDWqSyIOsHNLMbHvVn\nn3a46upxAgMBAAECggEAB0XGA2Fov9Sg+bIe1V9JzifhUHBW6fOsAl+Ou6Jd+K9G\nUd0LSJOAg9Jhr3YTEqMq0NacYU9rJNVKgCfx2c44dedwkz5uQDzfN/JVJTkUZC/H\nYL9rm5B17eeardjtkspKCckfW4WgkvGTR5stHeHXr275Qm/p7W6szpa6/1sKiDEM\nVlHxi+duQj0E3pmAMcW/EJCYJ85wyFkPJI/0N8NnURiHhBtBTJ92Xv8dpe5Wt0Ex\nDGohhJDHFzxv1hddvJg1Je3b4GAtJrOxb7C4SHfxekzx9nZjDXs/HBFcfV5lGx/q\nYSypTfmzTPXzmQuggTQ5VgzzJ2VnAIrjwR1N9lU/HQKBgQDzbsHYIg5gv8F7HHQf\nAkL2jYJgepMJ/gRximul3Ydmur0P1fVs6Ev21tEAXJM9PPmAPjhy4nm3wuWerAVA\n1HTXihJFwNEWvLGy5EI+pEIWBTXf3DJAPfX777LoFd2Xa+GFqSrVt08SYFBO91UC\n+8rcXbwXKResW52ubMiGYo4siwKBgQDq0NFDmPdjn7CIf7OukIEuqEnNoyculMCB\nJTz6TiCUsuWexuTrqKYPAoEqyrHdTXvoK70WohxLSG+ZJpBhy2m7fy/uIUCdQVBE\n4LY+ydZ105Jgh1vi1tHmsUjHHNABm7QaNVsPOgWvl9FVHNBVMAEelKSKNwki+n9c\n3DJe3Tu4cwKBgQDaYe0iYQL3Bm+jaxY9T0EVgEOLG8tXNnt0BFKoHQFARpwfXblr\nt0WWroYWxfYNBOtrgeYQIl5BXWWzH+0iiLY9Oo9D5kNtG2Bq9Nz850ymBoybRCYM\nfclz90hPbnY5Rj2uM+HKkkUsXh0NilLId2w4nxqCyImFRTdC6DJIZJfZGwKBgQCx\nLULZCJCSISootIK1kt+GfwDBIvwrj535VEnAbDb1PE86EMUmc6ho5vDjgvHWE+MM\negRBEazbuRpLqueCguOS0BMwUPLaNTAF6LBajB0/5pYqM7hHXuQed2J8qubgb8Xj\niKLeyF8F8T3IROeFf6U4l9vXVlOUiwKS5Ks1HSU0tQKBgQDFTj9/eBl7t6LXFTnx\nOuvD06/Tl7kRKBMrpsCemfY4qoG6mxWJwZFEgAV3kkFTh800vVjdEC5j2cJOatL0\n0oWqz3Mk7Cj6Ja0HQP8JfP6RvcdUul0jMS9Wz6ISVhI6HGsSuNk8ywhznnIVPg3g\nr4xAB3JR7Asrgx8v8VMwddRLuw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "hackathon@umkc-lab-1.iam.gserviceaccount.com",
+  "client_id": "112260688602314000001",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/hackathon%40umkc-lab-1.iam.gserviceaccount.com"
+}
