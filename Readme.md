@@ -1,21 +1,18 @@
-# Gamer AI:
-
-  Gamer AI is a progressive web app which will give top 10 games based on user preferences.
+# Crannium Labs Parking Management System :
 
 ## TEAM MEMBERS:
 
 **TEAM NAME : Fantastic Four**
 
-**Lead :** Murali Krishna Sai Chukka 
+**Lead :** Gulnoza Khakimova
 
-**Member 1:** Apoorva Geetanjali Avadhanula
+**Member 1:** Murali krishna sai Chukka
 
 **Member 2:** Venkatesh Ponduri   
 
-**Member 3:** Hima Bindu Vatsavayi 
+**Member 3:** Ly,Sang
 
-
-**Video URL :** https://youtu.be/Q2aKX07WZww
+**Video URL :** https://youtu.be/UvVbDWJGeG0
 
 **PPT URL :** https://github.com/chkrish9/HackaThon/tree/master/documentation
 
