@@ -28,7 +28,15 @@ export class ParkingService {
     let url = this.prepEndpoint("getall/");
     return this.http.get(url, { headers: headers });
   }
+
+  getFilter(searchTerm) {
+    let headers = new HttpHeaders({
+      "Content-Type": "application/json"
+    });
+    let url = this.prepEndpoint("search?licenseNumber=");
+    return this.http.get(url + searchTerm, { headers: headers });
+  }
   prepEndpoint(ep) {
-    return "http://127.0.0.1:3002/" + ep;
+    return "https://hackthon19.herokuapp.com/" + ep;
   }
 }

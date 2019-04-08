@@ -187,16 +187,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_parking_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/parking.service */ "./src/app/services/parking.service.ts");
+/* harmony import */ var angular2_toaster__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! angular2-toaster */ "./node_modules/angular2-toaster/angular2-toaster.js");
+
 
 
 
 var AddComponent = /** @class */ (function () {
-    function AddComponent(parkingService) {
+    function AddComponent(parkingService, toasterService) {
         this.parkingService = parkingService;
+        this.toasterService = toasterService;
         this.parking = {
-            "StudentId": "",
-            "LicenseNumber": "",
-            "Name": ""
+            StudentId: "",
+            LicenseNumber: "",
+            Name: ""
         };
     }
     AddComponent.prototype.ngOnInit = function () { };
@@ -204,10 +207,17 @@ var AddComponent = /** @class */ (function () {
         var _this = this;
         this.parkingService.add(this.parking).subscribe(function (data) {
             console.log(data);
+            var toast = {
+                type: "success",
+                title: "Success",
+                body: "Added Successfully.",
+                showCloseButton: true
+            };
+            _this.toasterService.pop(toast);
             _this.parking = {
-                "StudentId": "",
-                "LicenseNumber": "",
-                "Name": ""
+                StudentId: "",
+                LicenseNumber: "",
+                Name: ""
             };
         });
     };
@@ -217,7 +227,8 @@ var AddComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./add.component.html */ "./src/app/components/add/add.component.html"),
             styles: [__webpack_require__(/*! ./add.component.css */ "./src/app/components/add/add.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_parking_service__WEBPACK_IMPORTED_MODULE_2__["ParkingService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_parking_service__WEBPACK_IMPORTED_MODULE_2__["ParkingService"],
+            angular2_toaster__WEBPACK_IMPORTED_MODULE_3__["ToasterService"]])
     ], AddComponent);
     return AddComponent;
 }());
@@ -244,7 +255,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-default\">\n  <div class=\"container-fluid\">\n    <!-- Brand and toggle get grouped for better mobile display -->\n    <div class=\"navbar-header\">\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n      <a class=\"navbar-brand\" href=\"/home\">Parking</a>\n    </div>\n\n    <!-- Collect the nav links, forms, and other content for toggling -->\n    <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\n      <ul class=\"nav navbar-nav\">\n        <li class=\"active\"><a href=\"/home\">Home</a></li>\n        <li><a href=\"/add\">Add</a></li>\n      </ul>\n    </div><!-- /.navbar-collapse -->\n  </div><!-- /.container-fluid -->\n</nav>"
+module.exports = "<nav class=\"navbar navbar-default\">\n  <div class=\"container-fluid\">\n    <!-- Brand and toggle get grouped for better mobile display -->\n    <div class=\"navbar-header\">\n      <button\n        type=\"button\"\n        class=\"navbar-toggle collapsed\"\n        data-toggle=\"collapse\"\n        data-target=\"#bs-example-navbar-collapse-1\"\n        aria-expanded=\"false\"\n      >\n        <span class=\"sr-only\">Toggle navigation</span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n        <span class=\"icon-bar\"></span>\n      </button>\n      <a class=\"navbar-brand\" href=\"/home\">Parking</a>\n    </div>\n\n    <!-- Collect the nav links, forms, and other content for toggling -->\n    <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\n      <ul class=\"nav navbar-nav\">\n        <li><a href=\"/home\">Home</a></li>\n        <li><a href=\"/add\">Add</a></li>\n      </ul>\n    </div>\n    <!-- /.navbar-collapse -->\n  </div>\n  <!-- /.container-fluid -->\n</nav>\n"
 
 /***/ }),
 
@@ -299,7 +310,7 @@ module.exports = ".margin-5px {\n  margin-top: 5px;\n}\n\n/*# sourceMappingURL=d
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-sm-8 col-sm-offset-2\">\n  <div class=\"col-sm-12\">\n    <h2>PMS</h2>\n    <div class=\"input-group\">\n      <input\n        type=\"text\"\n        class=\"form-control\"\n        placeholder=\"Search for License Number\"\n        [(ngModel)]=\"task\"\n      />\n      <span class=\"input-group-btn\">\n        <button class=\"btn btn-primary hidden-xs\" type=\"button\">\n          <i class=\"fa fa-search\" aria-hidden=\"true\"></i>&nbsp;Search\n        </button>\n        <button class=\"btn btn-primary visible-xs\" type=\"button\">\n          <i class=\"fa fa-search\" aria-hidden=\"true\"></i>\n        </button>\n      </span>\n    </div>\n  </div>\n  <div class=\"col-sm-12 margin-5px\">\n    <div class=\"table-responsive\">\n      <table class=\"table\">\n        <thead>\n          <tr>\n            <th>Student Id</th>\n            <th>License Number</th>\n            <th>Name</th>\n            <th>Action</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr *ngFor=\"let pms of pmsList\">\n            <td>\n              {{ pms.StudentId }}\n            </td>\n            <td>\n              {{ pms.LicenseNumber }}\n            </td>\n            <td>\n              {{ pms.Name }}\n            </td>\n            <td>\n              <button type=\"button\" class=\"btn btn-info hidden-xs\" (click)=\"delete(pms.StudentId)\">\n                <i class=\"fa fa-trash-o\" aria-hidden=\"true\" ></i>&nbsp;Delete\n              </button>\n              <button type=\"button\" class=\"btn btn-info visible-xs\" (click)=\"delete(pms.StudentId)\">\n                <i class=\"fa fa-trash-o\" aria-hidden=\"true\" ></i>\n              </button>\n            </td>\n          </tr>\n        </tbody>\n      </table>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div class=\"col-sm-8 col-sm-offset-2\">\n  <div class=\"col-sm-12\">\n    <h2 class=\"text-center\">Welcome to UMKC Parking Management System</h2>\n    <div class=\"input-group\">\n      <input\n        type=\"text\"\n        class=\"form-control\"\n        placeholder=\"Search for License Number\"\n        [(ngModel)]=\"value\"\n      />\n      <span class=\"input-group-btn\">\n        <button\n          class=\"btn btn-primary hidden-xs\"\n          type=\"button\"\n          (click)=\"onSearchChange()\"\n        >\n          <i class=\"fa fa-search\" aria-hidden=\"true\"></i>&nbsp;Search\n        </button>\n        <button\n          class=\"btn btn-primary visible-xs\"\n          type=\"button\"\n          (click)=\"onSearchChange()\"\n        >\n          <i class=\"fa fa-search\" aria-hidden=\"true\"></i>\n        </button>\n      </span>\n    </div>\n  </div>\n  <div class=\"col-sm-12 margin-5px\">\n    <div class=\"table-responsive\">\n      <table class=\"table\">\n        <thead>\n          <tr>\n            <th>Student Id</th>\n            <th>License Number</th>\n            <th>Name</th>\n            <th>Action</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr *ngFor=\"let pms of pmsList\">\n            <td>\n              {{ pms.StudentId }}\n            </td>\n            <td>\n              {{ pms.LicenseNumber }}\n            </td>\n            <td>\n              {{ pms.Name }}\n            </td>\n            <td>\n              <button\n                type=\"button\"\n                class=\"btn btn-info hidden-xs\"\n                (click)=\"delete(pms.StudentId)\"\n              >\n                <i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>&nbsp;Delete\n              </button>\n              <button\n                type=\"button\"\n                class=\"btn btn-info visible-xs\"\n                (click)=\"delete(pms.StudentId)\"\n              >\n                <i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>\n              </button>\n            </td>\n          </tr>\n        </tbody>\n      </table>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -316,18 +327,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _services_parking_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/parking.service */ "./src/app/services/parking.service.ts");
+/* harmony import */ var angular2_toaster__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! angular2-toaster */ "./node_modules/angular2-toaster/angular2-toaster.js");
+
 
 
 
 var HomeComponent = /** @class */ (function () {
-    function HomeComponent(parkingService) {
+    function HomeComponent(parkingService, toasterService) {
         this.parkingService = parkingService;
+        this.toasterService = toasterService;
         this.get();
     }
     HomeComponent.prototype.ngOnInit = function () { };
     HomeComponent.prototype.delete = function (studentId) {
         var _this = this;
         this.parkingService.delete(studentId).subscribe(function (data) {
+            var toast = {
+                type: "success",
+                title: "Success",
+                body: "Deleted Successfully.",
+                showCloseButton: true
+            };
+            _this.toasterService.pop(toast);
             _this.get();
         });
     };
@@ -337,13 +358,25 @@ var HomeComponent = /** @class */ (function () {
             _this.pmsList = data;
         });
     };
+    HomeComponent.prototype.onSearchChange = function () {
+        var _this = this;
+        if (this.value.length > 0) {
+            this.parkingService.getFilter(this.value).subscribe(function (data) {
+                _this.pmsList = data;
+            });
+        }
+        else {
+            this.get();
+        }
+    };
     HomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: "app-home",
             template: __webpack_require__(/*! ./home.component.html */ "./src/app/components/home/home.component.html"),
             styles: [__webpack_require__(/*! ./home.component.css */ "./src/app/components/home/home.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_parking_service__WEBPACK_IMPORTED_MODULE_2__["ParkingService"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_parking_service__WEBPACK_IMPORTED_MODULE_2__["ParkingService"],
+            angular2_toaster__WEBPACK_IMPORTED_MODULE_3__["ToasterService"]])
     ], HomeComponent);
     return HomeComponent;
 }());
@@ -393,8 +426,15 @@ var ParkingService = /** @class */ (function () {
         var url = this.prepEndpoint("getall/");
         return this.http.get(url, { headers: headers });
     };
+    ParkingService.prototype.getFilter = function (searchTerm) {
+        var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
+            "Content-Type": "application/json"
+        });
+        var url = this.prepEndpoint("search?licenseNumber=");
+        return this.http.get(url + searchTerm, { headers: headers });
+    };
     ParkingService.prototype.prepEndpoint = function (ep) {
-        return "http://127.0.0.1:3002/" + ep;
+        return "https://hackthon19.herokuapp.com/" + ep;
     };
     ParkingService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({

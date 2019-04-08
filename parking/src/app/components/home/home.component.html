@@ -1,18 +1,26 @@
 <div class="col-sm-8 col-sm-offset-2">
   <div class="col-sm-12">
-    <h2>PMS</h2>
+    <h2 class="text-center">Welcome to UMKC Parking Management System</h2>
     <div class="input-group">
       <input
         type="text"
         class="form-control"
         placeholder="Search for License Number"
-        [(ngModel)]="task"
+        [(ngModel)]="value"
       />
       <span class="input-group-btn">
-        <button class="btn btn-primary hidden-xs" type="button">
+        <button
+          class="btn btn-primary hidden-xs"
+          type="button"
+          (click)="onSearchChange()"
+        >
           <i class="fa fa-search" aria-hidden="true"></i>&nbsp;Search
         </button>
-        <button class="btn btn-primary visible-xs" type="button">
+        <button
+          class="btn btn-primary visible-xs"
+          type="button"
+          (click)="onSearchChange()"
+        >
           <i class="fa fa-search" aria-hidden="true"></i>
         </button>
       </span>
@@ -41,11 +49,19 @@
               {{ pms.Name }}
             </td>
             <td>
-              <button type="button" class="btn btn-info hidden-xs" (click)="delete(pms.StudentId)">
-                <i class="fa fa-trash-o" aria-hidden="true" ></i>&nbsp;Delete
+              <button
+                type="button"
+                class="btn btn-info hidden-xs"
+                (click)="delete(pms.StudentId)"
+              >
+                <i class="fa fa-trash-o" aria-hidden="true"></i>&nbsp;Delete
               </button>
-              <button type="button" class="btn btn-info visible-xs" (click)="delete(pms.StudentId)">
-                <i class="fa fa-trash-o" aria-hidden="true" ></i>
+              <button
+                type="button"
+                class="btn btn-info visible-xs"
+                (click)="delete(pms.StudentId)"
+              >
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
               </button>
             </td>
           </tr>

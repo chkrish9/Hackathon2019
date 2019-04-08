@@ -74,7 +74,7 @@ app.post("/create", (req, res, next) => {
                 res.send("Registration Failed, Error While Registering "+err);
                 res.end();
             }
-            res.send("Inserted a document into the students collection.");
+            res.json({ msg: 'New Parking added successfully' });
         });
     });
 });
@@ -97,7 +97,7 @@ app.delete("/delete/:studentId", (req, res, next) => {
                 res.send("Error while deleting : "+err);
                 res.end();
             }
-            res.json({ msg: 'new contact added successfully' });
+            res.json({ msg: 'Parking deleted successfully' });
         });
     });
 });
@@ -122,6 +122,11 @@ app.get("/getall", (req, res, next) => {
             }
         });
     });
+});
+
+//Required for navigating angular routes without server routes
+app.all('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
 //Starting the server.
