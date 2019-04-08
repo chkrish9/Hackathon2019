@@ -1,4 +1,4 @@
-# Crannium Labs Parking Management System :
+# Crannium Labs - Parking Management System :
 
 ## TEAM MEMBERS:
 
