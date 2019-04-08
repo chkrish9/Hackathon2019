@@ -14,13 +14,13 @@
 
 **Video URL :** https://youtu.be/UvVbDWJGeG0
 
-**PPT URL :** https://github.com/chkrish9/HackaThon/tree/master/documentation
+**PPT URL :** https://github.com/chkrish9/Hackathon2019/blob/master/Hackathon.pptx
 
-**Web APP URL :** https://hackaroo.herokuapp.com/
+**Web APP URL :** https://hackthon19.herokuapp.com/
 
 ## Reference:
 
-https://embed.plnkr.co/plunk/1esaGq (Rating directive)
+https://www.youtube.com/watch?v=AifDb8oG8Kc (License plate recognition)
 
-https://www.youtube.com/watch?v=gcx-3qi7t7c&t=1064s (PWA)
+https://opencv.org/ (opencv)
 
